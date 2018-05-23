@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="820.0" prefWidth="1238.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerProfile">
+   <children>
+      <ImageView fitHeight="434.0" fitWidth="1290.0" layoutY="-1.0" onMouseClicked="#CambiarImagen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@portada_perfil.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="-1.0" prefHeight="29.0" prefWidth="1274.0" style="-fx-background-color: #f69f31;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Novedades" />
+          <Menu mnemonicParsing="false" text="Calendario y Eventos" />
+          <Menu mnemonicParsing="false" text="Cuenta">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Perfil" />
+                  <MenuItem mnemonicParsing="false" text="Cerrar Sesión" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Region layoutY="393.0" prefHeight="51.0" prefWidth="1264.0" style="-fx-background-color: #d47804;" />
+      <ScrollBar layoutX="1257.0" layoutY="29.0" orientation="VERTICAL" prefHeight="791.0" prefWidth="17.0" />
+      <Circle fill="#f69f31" layoutX="633.0" layoutY="409.0" radius="88.0" stroke="TRANSPARENT" strokeType="INSIDE">
+        
+      </Circle>
+      <Circle fill="DODGERBLUE" layoutX="634.0" layoutY="410.0" onMouseClicked="#CambiarImagenPerfil" radius="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Button layoutX="50.0" layoutY="403.0" mnemonicParsing="false" style="-fx-background-color: #d47804;" text="Timeline" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="197.0" layoutY="403.0" mnemonicParsing="false" style="-fx-background-color: #d47804;" text="Información" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="384.0" layoutY="403.0" mnemonicParsing="false" style="-fx-background-color: #d47804;" text="Amigos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="794.0" layoutY="402.0" mnemonicParsing="false" style="-fx-background-color: #d47804;" text="Fotos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="947.0" layoutY="402.0" mnemonicParsing="false" style="-fx-background-color: #d47804;" text="Vídeos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <MenuButton layoutX="1172.0" layoutY="406.0" mnemonicParsing="false" style="-fx-background-color: #d47804;" textFill="WHITE">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+   </children>
+</AnchorPane>
