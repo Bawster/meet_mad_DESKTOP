@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43caf9e2-742d-40b8-9a78-4c7d0d4c75c3" name="Default" comment="" />
+    <list default="true" id="43caf9e2-742d-40b8-9a78-4c7d0d4c75c3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/meet_mad_desktop1/sample/ControllerLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/meet_mad_desktop1/sample/ControllerProfile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/meet_mad_desktop1/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/meet_mad_desktop1/sample/Registrer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/meet_mad_desktop1/sample/fernando.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/meet_mad_desktop1/sample/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/meet_mad_desktop1/sample/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/meet_mad_desktop1/sample/portada_perfil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/meet_mad_desktop1/sample/profile.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/meet_mad_desktop1/sample/theme.css" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,8 +26,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="225">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -26,10 +37,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="28" />
-    <option name="width" value="1612" />
-    <option name="height" value="876" />
+    <option name="width" value="1910" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -155,10 +173,18 @@
       <option name="presentableId" value="Default" />
       <updated>1527058737781</updated>
     </task>
+    <task id="LOCAL-00001" summary="FIXED">
+      <created>1527066575715</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527066575715</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="28" width="1920" height="1052" extended-state="6" />
+    <frame x="0" y="28" width="1920" height="1052" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
@@ -169,12 +195,12 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32905984" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Learn" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -213,6 +239,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FIXED" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIXED" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -242,8 +272,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="225">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
