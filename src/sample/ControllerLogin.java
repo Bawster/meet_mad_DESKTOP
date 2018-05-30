@@ -13,6 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -51,7 +53,6 @@ public class ControllerLogin implements Initializable {
     private void focusContra(ActionEvent event) throws IOException {
         ContrasINPUT.requestFocus();
     }
-
     private boolean CredencialesCorrectos()
     {
         boolean let_in = false;
@@ -91,6 +92,18 @@ public class ControllerLogin implements Initializable {
         System.out.println(" CredencialesComprobacion Hecho correctamente");
         return let_in;
 
+    }
+
+
+
+    @FXML
+    private void RedireccionRegistro(ActionEvent event) throws IOException {
+        Parent profile = FXMLLoader.load(getClass().getResource("Registrer.fxml"));
+        Scene profile_scene = new Scene(profile);
+        Stage app_stage = (Stage) EntrarBUTTON.getScene().getWindow();
+        app_stage.hide();
+        app_stage.setScene(profile_scene);
+        app_stage.show();
     }
 
 
