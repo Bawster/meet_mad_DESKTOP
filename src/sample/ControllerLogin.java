@@ -1,10 +1,12 @@
 package sample;
 
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -33,20 +35,45 @@ public class ControllerLogin implements Initializable {
 
 
     @FXML
-    private void RedireccionPerfil(ActionEvent event) throws IOException {
+    private void RedireccionPerfil(ActionEvent event) {
+        Main.ex.submit(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    ControllerLogin.this.login(event);
+                } catch (IOException e) {
+                }
+            }
+        });
+    }
+
+    /**
+     * @author fquintana
+     * Fquintana async call
+     * @param event
+     * @throws IOException
+     */
+    public void login(ActionEvent event) throws IOException {
         Parent profile = FXMLLoader.load(getClass().getResource("profile.fxml"));
         Scene profile_scene = new Scene(profile);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        if(CredencialesCorrectos()) {
-            app_stage.hide();
-            app_stage.setScene(profile_scene);
-            app_stage.show();
-        } else{
-            EmailINPUT.clear();
-            ContrasINPUT.clear();
-            EmailINPUT.requestFocus();
-            CredencialesIncorrectos.setText("Datos Incorrectos");
-        }
+        Boolean corrrect =  CredencialesCorrectos();
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                if(corrrect) {
+                    app_stage.hide();
+                    app_stage.setScene(profile_scene);
+                    app_stage.show();
+                } else{
+                    EmailINPUT.clear();
+                    ContrasINPUT.clear();
+                    EmailINPUT.requestFocus();
+                    CredencialesIncorrectos.setText("Datos Incorrectos");
+                }
+            }
+        });
+
     }
 
     @FXML

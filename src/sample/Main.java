@@ -1,13 +1,19 @@
 package sample;
 
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 
 public class Main extends Application {
+
+    static ExecutorService ex = Executors.newFixedThreadPool(10);
 
     @Override
     public void start(Stage primaryStage) throws IOException {

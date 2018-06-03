@@ -1,11 +1,12 @@
 package sample;
-
+import com.lynden.gmapsfx.GoogleMapView;
+import com.lynden.gmapsfx.MapComponentInitializedListener;
+import com.lynden.gmapsfx.javascript.object.*;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.ImagePattern;
@@ -14,17 +15,12 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
-
-import javafx.event.ActionEvent;
-
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-import javafx.scene.Node;
-
-public class ControllerProfile {
+public class ControllerProfile implements MapComponentInitializedListener {
 
     private FileChooser fileChooser;
     private File filepath;
@@ -86,6 +82,44 @@ public class ControllerProfile {
         alert.setHeaderText("Esa imagen no es valida");
         alert.showAndWait();
     }
+
+    @FXML
+    public void initialize() {
+        mapView.addMapInializedListener(this);
+    }
+
+    @FXML
+    private GoogleMapView mapView;
+
+    private GoogleMap map;
+
+    @Override
+    public void mapInitialized() {
+        LatLong CafeteríaDOSA = new LatLong(40.4304084,-3.6343015);
+
+
+
+        //Set the initial properties of the map.
+        MapOptions mapOptions = new MapOptions();
+
+        mapOptions.center(new LatLong(40.4304084,-3.6343015))
+                .mapType(MapTypeIdEnum.ROADMAP).streetViewControl(false).overviewMapControl(false)
+                .zoom(17);
+
+        map = mapView.createMap(mapOptions);
+
+        //Add markers to the map
+        MarkerOptions markerOptions1 = new MarkerOptions();
+        markerOptions1.position(CafeteríaDOSA);
+        markerOptions1.title("CAFETERIA");
+        //markerOptions1.icon(MarkerImageFactory.createMarkerImage(getClass().getResource("tool.png").toString(),"png"));
+
+        Marker DavidParra = new Marker(markerOptions1);
+
+        map.addMarker( DavidParra );
+
+    }
+
 
 
 }
